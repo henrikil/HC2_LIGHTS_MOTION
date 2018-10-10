@@ -26,7 +26,7 @@ if startSource["type"] == "property" then
 	local triggeringDeviceId = startSource["deviceID"]
 	local triggeringDevicePropertyName = startSource["propertyName"]
 	local triggeringDeviceValue = fibaro:getValue(triggeringDeviceId, "value")
-	print(string.format("Scene trigget av %s %s som har verdien of %s.", triggeringDeviceId, triggeringDevicePropertyName, triggeringDeviceValue))
+	print(string.format("Scene trigget av %s %s som har verdien %s.", triggeringDeviceId, triggeringDevicePropertyName, triggeringDeviceValue))
 	for i, v in ipairs(detectors) do
 		if v == triggeringDeviceId and tonumber(triggeringDeviceValue) > 0 then 
 			triggeredBySpecifiedDevices = true
