@@ -42,7 +42,7 @@ end
 if shouldTurnLightsOn then
 	print("Lys på!.")
 	for i, deviceId in ipairs(lights) do
-		print(string.format("Turning on %s.", deviceId))
+		print(string.format("Slår på %s.", deviceId))
 		fibaro:call(deviceId, "turnOn")
 	end
 	print("lys på!")
